@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Press Start 2P", serif;
+  
+}
+
+#game-app {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgb(158, 201, 30);
+}
+
+.main-area {
+  width: 100%;
+  
+}
+
+.game-header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.copyright-text {
+  font-size: 1.3rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+.score-board {
+  font-size: 1.3rem;
+}
+
+.player-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+
+
+.emoji {
+  font-size: 10rem;
+  width: 13rem;
+  height: 13rem;
+  border: 2px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.win-announcement {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  background-color: rgb(240, 191, 76);
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+
+}
+
+.player-choices {
+    margin-top: 2rem;
+}
+.choice-btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-emoji {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.button-text {
+  text-transform: capitalize;
+  font-family: "Press Start 2P", serif;
+}
+
