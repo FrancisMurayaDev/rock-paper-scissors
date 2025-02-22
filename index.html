@@ -23,14 +23,14 @@
               >FrancisMurayaDev</a
             >
           </p>
-          <p class="score-board" id="score-board">Computer 0 0 Player</p>
+          <p class="score-board js-score">Computer 0 0 Player</p>
         </div>
         <div class="player-box" id="computer-box">
           <p class="player-box--title">Computer</p>
 
           <p class="emoji" id="computer-choice-emoji">✊</p>
         </div>
-        <p class="win-announcement" id="winner-announcement">Currently Draw</p>
+        <p class="win-announcement js-winner-announcement">Currently Draw</p>
         <div class="player-box" id="player-box">
           <p class="player-box--title">Player</p>
           <p class="emoji player-choice-emoji">✊</p>
@@ -72,6 +72,8 @@
     </div>
 
     <script>
+   
+
       const score = {
         computerWins: 0,
         playerWins: 0,
@@ -116,6 +118,13 @@
         } else if (result === 'Draw') {
           score.draw += 1;
         }
+
+        document.querySelector('.js-score')
+          .innerHTML = `Computer ${score.computerWins} ${score.playerWins} Player`;
+
+        document.querySelector('.js-winner-announcement')
+          .innerHTML = `${result}`;
+        
 
         alert(
           `You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
