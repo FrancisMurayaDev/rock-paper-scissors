@@ -118,8 +118,6 @@
           score.draw += 1;
         }
 
-        
-
         function updateScoreAnnouncement() {
           document.querySelector(
             ".js-score"
@@ -131,6 +129,18 @@
         }
 
         updateScoreAnnouncement();
+
+        function computerMoveEmojiUpdate() {
+          if (computerMove === "Rock") {
+            document.querySelector(".js-computer-choice").innerHTML = "✊";
+          } else if (computerMove === "Paper") {
+            document.querySelector(".js-computer-choice").innerHTML = "✋";
+          } else if (computerMove === "Scissors") {
+            document.querySelector(".js-computer-choice").innerHTML = "✌️";
+          }
+        }
+
+        computerMoveEmojiUpdate();
 
         function playerMoveEmojiUpdate() {
           if (playerMove === "Rock") {
