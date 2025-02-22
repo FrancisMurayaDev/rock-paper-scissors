@@ -28,12 +28,12 @@
         <div class="player-box" id="computer-box">
           <p class="player-box--title">Computer</p>
 
-          <p class="emoji" id="computer-choice-emoji">✋</p>
+          <p class="emoji js-computer-choice">✋</p>
         </div>
         <p class="win-announcement js-winner-announcement">Currently Draw</p>
         <div class="player-box" id="player-box">
           <p class="player-box--title">Player</p>
-          <p class="emoji player-choice-emoji">✋</p>
+          <p class="emoji player-choice-emoji js-player-choice">✋</p>
         </div>
       </div>
       <div class="player-choices">
@@ -72,13 +72,14 @@
     </div>
 
     <script>
-   
-
       const score = {
         computerWins: 0,
         playerWins: 0,
-        draw: 0
+        draw: 0,
       };
+      updateScoreAnnouncement();
+
+      playerMoveEmojiUpdate();
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -91,7 +92,6 @@
           } else if (computerMove === "Scissors") {
             result = "Draw";
           }
-
         } else if (playerMove === "Rock") {
           if (computerMove === "Rock") {
             result = "Draw";
@@ -100,7 +100,6 @@
           } else if (computerMove === "Scissors") {
             result = "Player Wins";
           }
-          
         } else if (playerMove === "Paper") {
           if (computerMove === "Rock") {
             result = "Player Wins";
@@ -111,20 +110,39 @@
           }
         }
 
-        if (result === 'Player Wins') {
+        if (result === "Player Wins") {
           score.playerWins += 1;
-        } else if (result === 'Computer Wins') {
+        } else if (result === "Computer Wins") {
           score.computerWins += 1;
-        } else if (result === 'Draw') {
+        } else if (result === "Draw") {
           score.draw += 1;
         }
 
-        document.querySelector('.js-score')
-          .innerHTML = `Computer ${score.computerWins} ${score.playerWins} Player`;
-
-        document.querySelector('.js-winner-announcement')
-          .innerHTML = `${result}`;
         
+
+        function updateScoreAnnouncement() {
+          document.querySelector(
+            ".js-score"
+          ).innerHTML = `Computer ${score.computerWins} ${score.playerWins} Player`;
+
+          document.querySelector(
+            ".js-winner-announcement"
+          ).innerHTML = `${result}`;
+        }
+
+        updateScoreAnnouncement();
+
+        function playerMoveEmojiUpdate() {
+          if (playerMove === "Rock") {
+            document.querySelector(".js-player-choice").innerHTML = "✊";
+          } else if (playerMove === "Paper") {
+            document.querySelector(".js-player-choice").innerHTML = "✋";
+          } else if (playerMove === "Scissors") {
+            document.querySelector(".js-player-choice").innerHTML = "✌️";
+          }
+        }
+
+        playerMoveEmojiUpdate();
 
         alert(
           `You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
