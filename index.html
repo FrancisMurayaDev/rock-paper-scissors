@@ -72,6 +72,12 @@
     </div>
 
     <script>
+      const score = {
+        computerWins: 0,
+        playerWins: 0,
+        draw: 0
+      };
+
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
         let result = "";
@@ -103,8 +109,17 @@
           }
         }
 
+        if (result === 'Player Wins') {
+          score.playerWins += 1;
+        } else if (result === 'Computer Wins') {
+          score.computerWins += 1;
+        } else if (result === 'Draw') {
+          score.draw += 1;
+        }
+
         alert(
-          `You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.`
+          `You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
+Player: ${score.playerWins}  ${score.computerWins} Computer`
         );
       }
 
