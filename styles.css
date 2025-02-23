@@ -6,16 +6,15 @@
 
 html {
   font-size: 62.5%;
-  }
+}
 
 body {
   font-size: 1.6rem;
   font-family: "Press Start 2P", serif;
-  
 }
 
 #game-app {
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -28,11 +27,9 @@ body {
 
 .main-area {
   width: 100%;
-  
 }
 
 .game-header {
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,8 +62,6 @@ a {
   margin-top: 3rem;
 }
 
-
-
 .emoji {
   font-size: 10rem;
   width: 13rem;
@@ -87,11 +82,10 @@ a {
   background-color: rgb(240, 191, 76);
   margin: 2rem auto;
   padding: 2rem 1rem;
-
 }
 
 .player-choices {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 .choice-btn {
   padding: 1rem 2rem;
@@ -110,4 +104,3 @@ a {
   text-transform: capitalize;
   font-family: "Press Start 2P", serif;
 }
-

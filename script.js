@@ -49,9 +49,7 @@ function playGame(playerMove) {
       ".js-score"
     ).innerHTML = `Computer ${score.computerWins} ${score.playerWins} Player`;
 
-    document.querySelector(
-      ".js-winner-announcement"
-    ).innerHTML = `${result}`;
+    document.querySelector(".js-winner-announcement").innerHTML = `${result}`;
   }
 
   updateScoreAnnouncement();
@@ -80,10 +78,8 @@ function playGame(playerMove) {
 
   playerMoveEmojiUpdate();
 
- /* alert(
-    `You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
-Player: ${score.playerWins}  ${score.computerWins} Computer`
-  );*/
+  /* alert(`You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
+      Player: ${score.playerWins}  ${score.computerWins} Computer`);*/
 }
 
 function pickComputerMove() {
