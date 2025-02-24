@@ -78,8 +78,8 @@ function playGame(playerMove) {
 
   playerMoveEmojiUpdate();
 
-  /* alert(`You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
-      Player: ${score.playerWins}  ${score.computerWins} Computer`);*/
+  // alert(`You Picked ${playerMove}, the computer picked ${computerMove}. ${result}.
+  //     Player: ${score.playerWins}  ${score.computerWins} Computer`);
 }
 
 function pickComputerMove() {
@@ -90,7 +90,7 @@ function pickComputerMove() {
     computerMove = "Rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
     computerMove = "Paper";
-  } else if (randomNumber >= 1 / 3 && randomNumber < 1) {
+  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
     computerMove = "Scissors";
   }
 
